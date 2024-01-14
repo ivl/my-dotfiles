@@ -1,0 +1,11 @@
+{
+    "name": "ivl-snippets",
+    "contributes": {
+        "snippets": [
+            {
+                "language": "all",
+                "path": "./snippets/all.json"
+            }
+        ]
+    }
+}
