@@ -1,10 +1,11 @@
 local wezterm = require 'wezterm'
 return {
+    font = wezterm.font ('Iosevka', {weight='Bold'}),
     scrollback_lines = 3500,
     -- color_scheme = 'termnial.sexy',
     color_scheme = 'Catppuccin Mocha',
     enable_tab_bar = false,
-    font_size = 16.0,
+    font_size = 21.0,
     -- macos_window_background_blur = 40,
     macos_window_background_blur = 30,
 
