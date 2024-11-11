@@ -22,13 +22,38 @@ return {
                     "rust_analyzer",
                     "tsserver",
                     "clangd",
-                    "jsonls"
+                    "jsonls",
+                    "lemminx",
                 },
                 handlers = {
                     function(server_name)
                         require("lspconfig")[server_name].setup {
                             capabilities = require('cmp_nvim_lsp').
                             default_capabilities()
+                        }
+                    end,
+                    ["lemminx"] = function()
+                        local lspconfig = require("lspconfig")
+                        lspconfig.lemminx.setup {
+                            filetypes = { "xml, sdf" },
+                            settings = {
+                                xml = {
+                                    validate = true,
+                                    completion = true,
+                                    hover = true,
+                                    xfiles = true,
+                                    xinclude = true,
+                                    xpointer = true,
+                                    xsl = true,
+                                    xsd = true,
+                                    xquery = true,
+                                    relaxng = true,
+                                    schematron = true,
+                                    enable = true,
+                                    enableImport = true,
+                                    enableDiagnostics = true
+                                }
+                            }
                         }
                     end,
                     ["lua_ls"] = function()

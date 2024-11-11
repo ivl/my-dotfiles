@@ -9,7 +9,8 @@ vim.keymap.set({"", "!"}, "<Left>", "", {})
 vim.keymap.set({"", "!"}, "<Up>", "", {})
 vim.keymap.set({"", "!"}, "<Down>", "", {})
 
-
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Goto previous [D]iagnostic message"})
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Goto previous [D]iagnostic message"})
 
 vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end)
 vim.keymap.set("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)
