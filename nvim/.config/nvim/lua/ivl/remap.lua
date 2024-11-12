@@ -9,6 +9,13 @@ vim.keymap.set({ "", "!" }, "<Left>", "", {})
 vim.keymap.set({ "", "!" }, "<Up>", "", {})
 vim.keymap.set({ "", "!" }, "<Down>", "", {})
 
+--- grep settings
+vim.opt.grepprg = "grep -HRIn $* ."
+vim.keymap.set("n", "<Leader>gg", ":copen | :silent :grep ")
+vim.keymap.set("n", "]q", ":cnext <CR>")
+vim.keymap.set("n", "[q", ":cprev <CR>")
+
+
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Next Diagnostic" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Previouse Diagnostic" })
 
