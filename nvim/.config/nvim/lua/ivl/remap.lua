@@ -33,6 +33,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts, { desc = "LSP Goto Definition" })
         vim.keymap.set("n", "gr", function() vim.lsp.buf.references() end, opts, { desc = "LSP References" })
         vim.keymap.set("n", "rn", function() vim.lsp.buf.rename() end, opts, { desc = "LSP Rename" })
+        vim.keymap.set("n", "ca", function() vim.lsp.buf.code_action() end, opts, { desc = "LSP Code Action" })
         vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts, { desc = "LSP Hoover" })
         vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts, { desc = "LSP Signature help" })
         vim.keymap.set('n', '<leader>f', function()
