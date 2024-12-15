@@ -29,6 +29,9 @@ return {
             vim.keymap.set('n', '<leader>fn', function()
                 builtin.find_files { cwd = vim.fn.stdpath 'config' }
             end, { desc = "Telescope Find Config Files" })
+            vim.keymap.set("n", "<leader>feg", function()
+                require("ivl.modules.telescope_extensions").live_multigrep()
+            end, { desc = "Live Multi Grep" })
         end
     }
 }
